@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Ứng dụng chuyển đổi tiền tệ</h1>
+<form action="appchuyendoitien.html" method="get">
+<table>
+    <tr>
+        <td>Amount</td>
+        <td>From Currency</td>
+        <td>To Currency</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><input type="text" id="doitien"></td>
+        <td><select name="local" id="from">
+            <option value="23000">Vietnam</option>
+            <option value="1">USD</option>
+            <option value="223">JPY</option></select>
+        </td>
+        <td><select name="local" id="to">
+            <option value="23000">Vietnam</option>
+            <option value="1">USD</option>
+            <option value="223">JPY</option></select>
+        </td>
+        <td><input type="submit" value="Convert" onclick="show();"></td>
+    </tr>
+</table>
+</form>
+
+</body>
+</html>
+<script>
+function show() {
+    let doitien;
+    let from1;
+    let to1;
+    let sotien;
+    doitien = document.getElementById('doitien').value;
+    from1 = document.getElementById('from').value;
+    to1 = document.getElementById('to').value;
+    sotien = (doitien * to1) / from1;
+    document.write('Result:' + sotien);
+}
+</script>
